@@ -1,12 +1,12 @@
 
 async function criarBaralhoEmbaralhado() {
-    const url = "http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
+    const url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
     const resposta = await fetch(url)
     return await resposta.json()
 }
 
 async function tirarUmaCarta(deck_id) {
-    const url = `http://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=1`
+    const url = `https://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=1`
     const resposta = await fetch(url)
     return await resposta.json()
 }
@@ -23,7 +23,7 @@ async function tirarUmaCarta(deck_id) {
 //     document.getElementById('carta').src = imagemCarta
 // }
 async function mostrarResto(deck_id) {
-    const url = `http://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=1`
+    const url = `https://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=1`
     const resposta = await fetch(url)
     const baralho = await resposta.json()
     const imagemCarta = baralho.cards[0].image
