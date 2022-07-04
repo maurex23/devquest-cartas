@@ -30,3 +30,13 @@ body {
     justify-content: center;
     align-items: center
 }
+
+#tirar-carta {
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s
+}
+
+#tirar-carta:hover {
+    transform: scale(1.07)
+}
